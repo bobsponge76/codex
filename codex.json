@@ -1,8 +1,8 @@
 {
   "id": "78c740df-e12a-48e9-82b1-000000000000",
   "revision": 41,
-  "last_node_id": 280,
-  "last_link_id": 634,
+  "last_node_id": 282,
+  "last_link_id": 637,
   "nodes": [
     {
       "id": 87,
@@ -209,13 +209,7 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            207,
-            209,
-            296,
-            313,
-            342,
-            395,
-            575
+            636
           ]
         }
       ],
@@ -264,8 +258,8 @@
         "cnr_id": "comfyui-mxtoolkit",
         "ver": "1.0.0",
         "Node name for S&R": "mxSlider",
-        "value": 0.001,
-        "min": 0.001,
+        "value": 0.0,
+        "min": 0.0,
         "max": 1,
         "step": 0.01,
         "decimals": 3,
@@ -273,12 +267,107 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": [
-        0,
-        0.001,
+        0.0,
+        0.0,
         1
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
+    },
+    {
+      "id": 281,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        963.1312866210938,
+        -474.9049072265625
+      ],
+      "size": [
+        350,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "slot_index": 0,
+          "links": [
+            635
+          ]
+        }
+      ],
+      "title": "Redux ativo?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PrimitiveBoolean",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 282,
+      "type": "If ANY execute A else B",
+      "pos": [
+        1388.9627075195312,
+        -205.8708953857422
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ANY",
+          "type": "*",
+          "link": 635
+        },
+        {
+          "name": "IF_TRUE",
+          "type": "*",
+          "link": 636
+        },
+        {
+          "name": "IF_FALSE",
+          "type": "*",
+          "link": 637
+        }
+      ],
+      "outputs": [
+        {
+          "name": "?",
+          "type": "*",
+          "links": [
+            207,
+            209,
+            296,
+            313,
+            342,
+            395,
+            575
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-logic",
+        "ver": "1.0.0",
+        "Node name for S&R": "If ANY execute A else B"
+      },
+      "widgets_values": []
     },
     {
       "id": 26,
@@ -309,7 +398,8 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            206
+            206,
+            637
           ]
         }
       ],
@@ -8980,7 +9070,7 @@
     ],
     [
       207,
-      88,
+      282,
       0,
       3,
       1,
@@ -8988,7 +9078,7 @@
     ],
     [
       209,
-      88,
+      282,
       0,
       42,
       4,
@@ -9300,7 +9390,7 @@
     ],
     [
       296,
-      88,
+      282,
       0,
       133,
       4,
@@ -9396,7 +9486,7 @@
     ],
     [
       313,
-      88,
+      282,
       0,
       141,
       2,
@@ -9500,7 +9590,7 @@
     ],
     [
       342,
-      88,
+      282,
       0,
       153,
       4,
@@ -9884,7 +9974,7 @@
     ],
     [
       395,
-      88,
+      282,
       0,
       171,
       4,
@@ -10380,7 +10470,7 @@
     ],
     [
       575,
-      88,
+      282,
       0,
       239,
       1,
@@ -10657,6 +10747,30 @@
       146,
       0,
       "IMAGE"
+    ],
+    [
+      635,
+      281,
+      0,
+      282,
+      0,
+      "*"
+    ],
+    [
+      636,
+      88,
+      0,
+      282,
+      1,
+      "*"
+    ],
+    [
+      637,
+      26,
+      0,
+      282,
+      2,
+      "*"
     ]
   ],
   "groups": [
