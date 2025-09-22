@@ -1,8 +1,8 @@
 {
   "id": "78c740df-e12a-48e9-82b1-000000000000",
   "revision": 41,
-  "last_node_id": 280,
-  "last_link_id": 634,
+  "last_node_id": 282,
+  "last_link_id": 645,
   "nodes": [
     {
       "id": 87,
@@ -1541,10 +1541,7 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            321,
-            596,
-            597,
-            598
+            596
           ]
         },
         {
@@ -4430,7 +4427,7 @@
         {
           "name": "image_target",
           "type": "IMAGE",
-          "link": 387
+          "link": 645
         }
       ],
       "outputs": [
@@ -5420,7 +5417,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 597
+          "link": 640
         }
       ],
       "outputs": [],
@@ -6387,7 +6384,7 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            387
+            643
           ]
         },
         {
@@ -7063,7 +7060,7 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            591
+            636
           ]
         }
       ],
@@ -7677,7 +7674,7 @@
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 591
+          "link": 638
         }
       ],
       "outputs": [
@@ -7739,7 +7736,9 @@
           "links": [
             290,
             500,
-            625
+            625,
+            637,
+            644
           ]
         }
       ],
@@ -7834,7 +7833,7 @@
           "dir": 3,
           "name": "image_a",
           "type": "IMAGE",
-          "link": 321
+          "link": 639
         },
         {
           "dir": 3,
@@ -7937,7 +7936,9 @@
           "name": "BOOLEAN",
           "type": "BOOLEAN",
           "links": [
-            622
+            622,
+            635,
+            642
           ]
         }
       ],
@@ -8555,7 +8556,7 @@
           "dir": 3,
           "name": "image_b",
           "type": "IMAGE",
-          "link": 598
+          "link": 641
         }
       ],
       "outputs": [],
@@ -8615,6 +8616,101 @@
       },
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 281,
+      "type": "If ANY execute A else B",
+      "pos": [
+        3300.0,
+        -520.0
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {},
+      "order": 108,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ANY",
+          "type": "*",
+          "link": 635
+        },
+        {
+          "name": "IF_TRUE",
+          "type": "*",
+          "link": 636
+        },
+        {
+          "name": "IF_FALSE",
+          "type": "*",
+          "link": 637
+        }
+      ],
+      "outputs": [
+        {
+          "name": "?",
+          "type": "*",
+          "links": [
+            638,
+            639,
+            640,
+            641
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-logic",
+        "ver": "1.0.0",
+        "Node name for S&R": "If ANY execute A else B"
+      }
+    },
+    {
+      "id": 282,
+      "type": "If ANY execute A else B",
+      "pos": [
+        -700.0,
+        700.0
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {},
+      "order": 133,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ANY",
+          "type": "*",
+          "link": 642
+        },
+        {
+          "name": "IF_TRUE",
+          "type": "*",
+          "link": 643
+        },
+        {
+          "name": "IF_FALSE",
+          "type": "*",
+          "link": 644
+        }
+      ],
+      "outputs": [
+        {
+          "name": "?",
+          "type": "*",
+          "links": [
+            645
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-logic",
+        "ver": "1.0.0",
+        "Node name for S&R": "If ANY execute A else B"
+      }
     }
   ],
   "links": [
@@ -9427,14 +9523,6 @@
       "UPSCALE_MODEL"
     ],
     [
-      321,
-      44,
-      0,
-      142,
-      0,
-      "IMAGE"
-    ],
-    [
       331,
       148,
       0,
@@ -9825,14 +9913,6 @@
       168,
       9,
       "DETAILER_HOOK"
-    ],
-    [
-      387,
-      168,
-      0,
-      146,
-      1,
-      "IMAGE"
     ],
     [
       388,
@@ -10475,14 +10555,6 @@
       "IMAGE"
     ],
     [
-      591,
-      245,
-      0,
-      107,
-      0,
-      "IMAGE"
-    ],
-    [
       592,
       246,
       0,
@@ -10503,22 +10575,6 @@
       44,
       0,
       100,
-      1,
-      "IMAGE"
-    ],
-    [
-      597,
-      44,
-      0,
-      151,
-      0,
-      "IMAGE"
-    ],
-    [
-      598,
-      44,
-      0,
-      68,
       1,
       "IMAGE"
     ],
@@ -10657,6 +10713,94 @@
       146,
       0,
       "IMAGE"
+    ],
+    [
+      635,
+      277,
+      0,
+      281,
+      0,
+      "*"
+    ],
+    [
+      636,
+      245,
+      0,
+      281,
+      1,
+      "*"
+    ],
+    [
+      637,
+      130,
+      0,
+      281,
+      2,
+      "*"
+    ],
+    [
+      638,
+      281,
+      0,
+      107,
+      0,
+      "*"
+    ],
+    [
+      639,
+      281,
+      0,
+      142,
+      0,
+      "*"
+    ],
+    [
+      640,
+      281,
+      0,
+      151,
+      0,
+      "*"
+    ],
+    [
+      641,
+      281,
+      0,
+      68,
+      1,
+      "*"
+    ],
+    [
+      642,
+      277,
+      0,
+      282,
+      0,
+      "*"
+    ],
+    [
+      643,
+      168,
+      0,
+      282,
+      1,
+      "*"
+    ],
+    [
+      644,
+      130,
+      0,
+      282,
+      2,
+      "*"
+    ],
+    [
+      645,
+      282,
+      0,
+      146,
+      1,
+      "*"
     ]
   ],
   "groups": [
