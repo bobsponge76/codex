@@ -209,7 +209,6 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            207,
             209,
             296,
             313,
@@ -623,7 +622,6 @@
           "links": [
             66,
             67,
-            130,
             133,
             119,
             120,
@@ -1711,7 +1709,6 @@
           "name": "",
           "type": "FLOAT",
           "links": [
-            274,
             536
           ]
         }
@@ -1806,7 +1803,6 @@
           "name": "",
           "type": "FLOAT",
           "links": [
-            216,
             578
           ]
         }
@@ -1955,78 +1951,6 @@
       "widgets_values": [],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        188.18533325195312,
-        -895.5597534179688
-      ],
-      "size": [
-        315,
-        262
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 59,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 196
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 207
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 143
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 175
-        },
-        {
-          "name": "denoise",
-          "type": "FLOAT",
-          "widget": {
-            "name": "denoise"
-          },
-          "link": 216
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "KSampler",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        535119738702477,
-        "randomize",
-        50,
-        1,
-        "euler",
-        "beta",
-        0.217
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 206,
@@ -2372,7 +2296,6 @@
           "name": "output",
           "type": "*",
           "links": [
-            415,
             538
           ]
         }
@@ -2487,100 +2410,6 @@
       "widgets_values": [],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 213,
-      "type": "If ANY execute A else B",
-      "pos": [
-        4328.0693359375,
-        -802.5888671875
-      ],
-      "size": [
-        140,
-        66
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "ANY",
-          "type": "*",
-          "link": null
-        },
-        {
-          "name": "IF_TRUE",
-          "type": "*",
-          "link": null
-        },
-        {
-          "name": "IF_FALSE",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "?",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-logic",
-        "ver": "1.0.0",
-        "Node name for S&R": "If ANY execute A else B"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 216,
-      "type": "GetImageSize+",
-      "pos": [
-        4238.50390625,
-        -768.5533447265625
-      ],
-      "size": [
-        159.50155639648438,
-        66
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "count",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "1.1.0",
-        "Node name for S&R": "GetImageSize+"
-      },
-      "widgets_values": []
     },
     {
       "id": 217,
@@ -3113,10 +2942,8 @@
           "slot_index": 0,
           "links": [
             193,
-            196,
             228,
             244,
-            281,
             293,
             303,
             339,
@@ -3393,7 +3220,6 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            143,
             129,
             132,
             136,
@@ -3750,21 +3576,24 @@
           "type": "INT",
           "widget": {
             "name": "width"
-          }
+          },
+          "link": null
         },
         {
           "name": "height",
           "type": "INT",
           "widget": {
             "name": "height"
-          }
+          },
+          "link": null
         },
         {
           "name": "batch_size",
           "type": "INT",
           "widget": {
             "name": "batch_size"
-          }
+          },
+          "link": null
         }
       ],
       "outputs": [
@@ -3875,7 +3704,6 @@
           "type": "LATENT",
           "slot_index": 0,
           "links": [
-            175,
             577
           ]
         }
@@ -4645,55 +4473,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 128,
-      "type": "ImageScaleBy",
-      "pos": [
-        2954.267822265625,
-        -516.7523803710938
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 85,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 415
-        },
-        {
-          "name": "scale_by",
-          "type": "FLOAT",
-          "widget": {
-            "name": "scale_by"
-          },
-          "link": 274
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "ImageScaleBy",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "lanczos",
-        1.5
-      ]
-    },
-    {
       "id": 126,
       "type": "ControlNetLoader",
       "pos": [
@@ -4762,7 +4541,6 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            284,
             583
           ]
         }
@@ -5077,74 +4855,6 @@
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 129,
-      "type": "KSampler",
-      "pos": [
-        3129.1455078125,
-        -1011.2147216796875
-      ],
-      "size": [
-        210,
-        262
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 93,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 281
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 282
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 283
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 284
-        },
-        {
-          "name": "denoise",
-          "type": "FLOAT",
-          "widget": {
-            "name": "denoise"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "KSampler",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        643615971466218,
-        "randomize",
-        20,
-        1,
-        "euler",
-        "beta",
-        0.59
-      ]
     },
     {
       "id": 148,
@@ -5720,7 +5430,6 @@
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            282,
             581
           ]
         },
@@ -5728,7 +5437,6 @@
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
-            283,
             582
           ]
         }
@@ -8803,14 +8511,6 @@
       "BBOX_DETECTOR"
     ],
     [
-      143,
-      7,
-      0,
-      3,
-      2,
-      "CONDITIONING"
-    ],
-    [
       146,
       32,
       0,
@@ -8859,14 +8559,6 @@
       "BOOLEAN"
     ],
     [
-      175,
-      71,
-      0,
-      3,
-      3,
-      "LATENT"
-    ],
-    [
       176,
       37,
       0,
@@ -8904,14 +8596,6 @@
       0,
       42,
       1,
-      "MODEL"
-    ],
-    [
-      196,
-      77,
-      0,
-      3,
-      0,
       "MODEL"
     ],
     [
@@ -8979,28 +8663,12 @@
       "CONDITIONING"
     ],
     [
-      207,
-      88,
-      0,
-      3,
-      1,
-      "CONDITIONING"
-    ],
-    [
       209,
       88,
       0,
       42,
       4,
       "CONDITIONING"
-    ],
-    [
-      216,
-      97,
-      0,
-      3,
-      4,
-      "FLOAT"
     ],
     [
       217,
@@ -9179,14 +8847,6 @@
       "IMAGE"
     ],
     [
-      274,
-      92,
-      0,
-      128,
-      1,
-      "FLOAT"
-    ],
-    [
       276,
       32,
       0,
@@ -9217,38 +8877,6 @@
       127,
       1,
       "CONDITIONING"
-    ],
-    [
-      281,
-      77,
-      0,
-      129,
-      0,
-      "MODEL"
-    ],
-    [
-      282,
-      127,
-      0,
-      129,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      283,
-      127,
-      1,
-      129,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      284,
-      131,
-      0,
-      129,
-      3,
-      "LATENT"
     ],
     [
       286,
@@ -9951,14 +9579,6 @@
       133,
       0,
       181,
-      0,
-      "IMAGE"
-    ],
-    [
-      415,
-      181,
-      0,
-      128,
       0,
       "IMAGE"
     ],
